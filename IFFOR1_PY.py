@@ -17,7 +17,19 @@ Problem Statement:
     print double the value of i, if i is even.
     If i is zero then, add 3 to i.
 '''
+'''
+Sample Input
+2
+5
+3
+Sample Output
+3 1 4 9 8
+3 1 4
+'''
+#list comprehension used for storing the inputs for multiple testcases
 nums = [int(input()) for i in range(int(input()))]
+
+#creating a temporary list for each testcase based on the rules and printing it
 for stuff in nums:
     ls = []
     for i in range(stuff):
