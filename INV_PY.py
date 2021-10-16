@@ -35,18 +35,22 @@ DELETED Item Board
 Item Servo could not be DELETED
 Total Items in Inventory: 16
 '''
+#number of testcases
 n = int(input())
 for i in range(n):
+    # looping over the testcases and storing the inventory data in an dictionary data structure
     nOfItems = int(input())
     invent ={}
     
     for a in range(nOfItems):
         item,count = input().split()
         invent[item] =int(count)
-        
+    
+    # taking in the number of operations and storing each operation in a list
     nOfOps = int(input())
     lsOfOperations = [input().split() for b in range(nOfOps)]
-
+    
+    #parsing through each command and modifying the inventory according to that
     for items in  lsOfOperations:
         op,name,number = items
         
@@ -68,5 +72,6 @@ for i in range(n):
             else:
                 print('Item',name,'does not exist')
     
+    #Finally printing the total amount of items present in the inventory
     print('Total Items in Inventory:',sum(invent.values()))
     
