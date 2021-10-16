@@ -23,22 +23,26 @@ Sample Input
 -2 3 -5 1 8 -4 2 7
 
 Sample Output
-7 2 -4 8 1 -5 3 -2 4 5
+7 2 -4 8 1 -5 3 -2
+4 5
 -11
 14
 '''
-
+#number of testcases
 nOfTest = int(input())
 for i in range(nOfTest):
+    #length of input list
     aLen = int(input())
     mainList = list(map(int,input().split()))
+    #creating the required lists 
     revList = mainList[::-1]
     Index3 = [mainList[x]+3 for x in range(1,aLen) if x%3==0]
     Index5 = [mainList[x]-7 for x in range(1,aLen) if x%5==0]
     FinalSum = sum(mainList[3:8])
     
-    print(' '.join(map(str,revList)),' '.join(map(str,Index3)))
-    # print(' '.join(map(str,Index3)))
+    #printing out the stuff
+    print(' '.join(map(str,revList)))
+    print(' '.join(map(str,Index3)))
     print(' '.join(map(str,Index5)))
     print(FinalSum)
     
