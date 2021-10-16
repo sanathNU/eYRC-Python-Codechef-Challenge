@@ -13,9 +13,23 @@ Problem STatement:
 
     If str is found to be a palindrome, print It is a palindrome
 '''
+'''
+Sample Input
+3
+AhheioIehHA
+OeaiensneIaIeO
+wieowppwoeiw
+
+Sample Output
+It is a palindrome
+It is not a palindrome
+It is a palindrome
+'''
+# This list stores all test case inputs in uppercase, so as to satisfy the 'case insensitivity' criteria. 
 main_ls=[str(input().upper()) for i in range(int(input()))]
 
 for items in main_ls:
+    # reversing the string and checking if they are the same
     if items==items[::-1]:
         print("It is a palindrome")
     else:
