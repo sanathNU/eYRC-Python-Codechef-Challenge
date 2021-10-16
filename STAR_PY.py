@@ -13,9 +13,21 @@ Problem Statement:
 
      row should have the required number of stars (*) and hash (#) symbols.
 '''
-
+'''
+Sample Input
+1
+5
+Sample Output
+****#
+****
+***
+**
+*
+'''
+#list comprehension for taking all inputs
 ls = [int(input()) for i in range(int(input()))]
 for items in ls:
+    #creating individual strings with '*' and then replacing every 5th element with '#'
     temp = items * '*'
     temp1=[]
     for a in range(1,items+1):
@@ -23,6 +35,7 @@ for items in ls:
             temp1.append('#')
         else:
             temp1.append('*')
+    #printing each temp string          
     for b in range(items):
         print(''.join(temp1))
         temp1=temp1[:-1]                                                              
